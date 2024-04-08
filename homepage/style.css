@@ -17,4 +17,16 @@ body{
     display: flex;
 }
 
+.header .logo{
+    cursor: pointer;
+}
 
+.header .logo img{
+    height: 75px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header .logo img:hover{
+    transform: scale(1.2);
+}
