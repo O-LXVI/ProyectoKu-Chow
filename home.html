@@ -4,8 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Home Ku-chow</h1>
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class=" logo"></a>
+            <input type="#checkbox" id="menu" />
+            <label for="menu">
+                <img src="imagenes/vecteezy_abstract-circle-logo-icon_12986755.png" class="menu-icono" alt="">
+            </label>
+        </div>
+    </header>
+    <div class="slide">
+        <div class="slide-inner">
+            <input class="slide-open" type="radio" id="slide-1" 
+                  name="slide" aria-hidden="true" hidden="" checked="checked">
+            <div class="slide-item">
+                <img src="imagenes/imagen 1.jpg" class= imgcarrusel alt="">
+            </div>
+            <input class="slide-open" type="radio" id="slide-2" 
+                  name="slide" aria-hidden="true" hidden="">
+            <div class="slide-item">
+                <img src="https://www.migueltroyano.com/wp-content/uploads/2020/09/postgres_copy.png">
+            </div>
+            <input class="slide-open" type="radio" id="slide-3" 
+                  name="slide" aria-hidden="true" hidden="">
+            <div class="slide-item">
+                <img src="https://www.migueltroyano.com/wp-content/uploads/2020/09/excel_guardar_como_csv.jpg">
+            </div>
+            <label for="slide-3" class="slide-control prev control-1">‹</label>
+            <label for="slide-2" class="slide-control next control-1">›</label>
+            <label for="slide-1" class="slide-control prev control-2">‹</label>
+            <label for="slide-3" class="slide-control next control-2">›</label>
+            <label for="slide-2" class="slide-control prev control-3">‹</label>
+            <label for="slide-1" class="slide-control next control-3">›</label>
+            <ol class="slide-indicador">
+                <li>
+                    <label for="slide-1" class="slide-circulo">•</label>
+                </li>
+                <li>
+                    <label for="slide-2" class="slide-circulo">•</label>
+                </li>
+                <li>
+                    <label for="slide-3" class="slide-circulo">•</label>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <!-- Agrega enlaces para la información adicional --
+    <a href="informacion1.html">Más información sobre Imagen 1</a>
+    <a href="informacion2.html">Más información sobre Imagen 2</a>
+    <a href="informacion3.html">Más información sobre Imagen 3</a>
+    </div>
+-->
+    <header>
+        <div class="menu">
+            <nav class="navbar">
+                <u1>
+                    <li><a href=#>Contacto</a></li>
+                    <li><a href=#>Iniciar sesion</a></li>
+                    <li><a href=#>Registrarse</a></li>
+                </u1>
+
+            </nav>
+        </div>
+        <section class="Productos">
+            <div class="productos-content container">
+                <br>
+                <div>
+                    <p class= txtp>
+                        Nuestros productos
+                    </p>
+                </div>
+                <table>
+                    <tr>
+                        <div class="productos-group">
+                            <td>
+                                <div class="pd-1">
+                                    <img src="imagenes/pd1.jpg" class= img alt="">
+                                    <h3>DGP</h3>
+                                    <P class="texto">
+                                        Batería De Auto DGP 
+                                        MF55457 55AH 420CCA
+                                    </p>
+                                    <h3>$60.000</h3>
+                                    <a href="#" class="btn-1">Agregar al carro</a>        
+                                </div>
+                            </td>
+                            <td>
+                                <div class="pd-1">
+                                    <img src="imagenes/pd2.jpg" class= img alt="">
+                                    <h3>Fortune</h3>
+                                    <P class="texto">
+                                        Neumatico 185/60R14 Fortune
+                                        FSR-802 ARO 14
+                                    </p>
+                                    <h3>$35.000</h3>
+                                    <a href="#" class="btn-1">Agregar al carro</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="pd-1">
+                                    <img src="imagenes/pd3.webp" class= img alt="">
+                                    <h3>Motorlife</h3>
+                                    <P class="texto">
+                                        Cargador de Batería MOTORLIFE 6/12V
+                                    </p>
+                                    <h3>$25.000</h3>
+                                    <a href="#" class="btn-1">Agregar al carro</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="pd-1">
+                                    <img src="imagenes/pd4.webp" class= img alt="">
+                                    <h3>Modula</h3>
+                                    <P class="texto">
+                                        PortaEquipaje para Auto Modelo WEGO 360LTS
+                                    </p>
+                                    <h3>$225.000</h3>
+                                    <a href="#" class="btn-1">Agregar al carro</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="pd-1">
+                                    <img src="imagenes/pd5.jpg" class= img alt="">
+                                    <h3>Modula</h3>
+                                    <P class="texto">
+                                        Barra techo Modelo Oval (Riel Abierto) color plata
+                                    </p>
+                                    <h3>$104.000</h3>
+                                    <a href="#" class="btn-1">Agregar al carro</a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="pd-1">
+                                    <img src="imagenes/pd6.jpg" class= img alt="">
+                                    <h3>Mobil</h3>
+                                    <P class="texto">
+                                        Lubricante Semi Sintetico 10W40 SUPER 2000 4L
+                                    </p>
+                                    <h3>$33.000</h3>
+                                    <a href="#" class="btn-1">Agregar al carro</a>
+                                </div>
+                            </td>
+                        </div>
+                    </tr>
+                </table>
+            </div>
+            <br>
+        </section>
+        <footer class="footer">
+            <div class="footer-content container">
+                <div class="link">
+                    <h3>¿Quienes somos?</h3>
+                    <p>
+                        En Ku-chow, nos especializamos en mantener tu vehículo en óptimas condiciones de funcionamiento.
+                        Nuestro equipo de expertos en mecánica automotriz está comprometido con la excelencia en el servicio y la satisfacción del cliente. 
+                        Desde reparaciones básicas hasta diagnósticos avanzados, estamos aquí para cuidar de tu 
+                        automóvil con habilidad y profesionalismo. 
+                        Confía en nosotros para mantener tu vehículo en la carretera y en tu vida sin problemas. 
+                    </p>
+                </div>
+            
+            </div>
+        </footer>
+    </header>
+    <section class="imagenpng">
+        <img scr= "https://cdn.euroinnova.edu.es/img/subidasEditor/sin%20t%C3%ADtulo-267-1565950353.png" alt="">
+    </section>
+
 </body>
 </html>
