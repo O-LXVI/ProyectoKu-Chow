@@ -28,10 +28,8 @@ td{
 }
 
 .header {
-    background-image: linear-gradient(
-        rgba(0,0,0,0.7),
-        rgba(0,0,0,0.7)),
-        url(imagenes/imagen.jpg);
+
+    background-color: #db9a34;
     background-position:center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -64,12 +62,12 @@ td{
 .menu .navbar u1 li a{
     font-size: 18px;
     padding: 20px;
-    color: #FFFDFC;
+    color:black;
     display: block;
     font-weight: 400;
 }
 .menu .navbar u1 li a:hover{
-    color:#ce9678;
+    color: #fff;
 } 
 #menu{
     display: none;
@@ -243,14 +241,14 @@ margin-bottom: 35px;
 }
 
 .imgcarrusel{
-    width: 9000px;
+    width: 910px;
     height: auto;
     position: absolute;
     opacity: 10;
 }
 
 .footer{
-    padding: 100px 0;
+    padding: 20px 0;
     background-color: #91eaf9;
 }
 
@@ -260,5 +258,15 @@ margin-bottom: 35px;
     font-size: 16px;
     padding: 100 90px;
     margin-bottom: 0px;
-    text-align: center;
+    text-align: justify;
 }
+
+.footer-contact{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 0 90px;
+    margin-bottom: 0px;
+    text-align: justify;
+}
+
