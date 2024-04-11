@@ -33,15 +33,15 @@ td{
     background-color: #db9a34;
     background-position:bottom;
     background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 15vh;
+    background-size:contain;
+    min-height: 11vh;
     display: flex;
     align-items: center;
 }
 
 .menu{
     position: relative;
-    bottom: 510px;
+    bottom: 484px;
     left: 16px;
     justify-content: space-between;
 }
@@ -51,7 +51,7 @@ td{
 }
 
 .menu .cat img{
-    height: 127px;
+    height: 110px;
     width: auto;
     transition: all 0.3s;
 }
@@ -62,7 +62,7 @@ td{
 
 .logo{
     color:#FFFDFC;
-    font-size: 25px;
+    font-size: 35px;
     font-weight: 800;
 }
 
@@ -74,11 +74,11 @@ td{
     position: relative;
     float: right;
     right: 40px;
-    bottom: 70px;
+    bottom: 80px;
 }
 
 .menu .navbar u1 li a{
-    font-size: 16px;
+    font-size: 17px;
     padding: 16px;
     color:black;
     display: block;
@@ -132,7 +132,7 @@ margin-bottom: 35px;
     font-size: 22px;
     color: black;
     padding:0 8px;
-    margin-bottom: 35px;
+    margin-bottom: 3px;
 }
 
 .productos-group{
@@ -268,7 +268,7 @@ margin-bottom: 35px;
 
 .footer{
     padding: 16px 0;
-    background-color: #91eaf9;
+    background-color: #db9a34;
 }
 
 .footer-content{
