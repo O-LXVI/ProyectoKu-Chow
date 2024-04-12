@@ -267,8 +267,9 @@ margin-bottom: 35px;
 }
 
 .footer{
-    padding: 16px 0;
+    padding: 20px 0;
     background-color: #db9a34;
+    margin-top: 40px;
 }
 
 .footer-content{
