@@ -1,0 +1,295 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: boder-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family:'Helvetica neue', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+table{
+    width: 100%; 
+    border-collapse: collapse;
+}
+
+td{
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    text-align: center; /
+}
+
+.header {
+
+    background-color: #db9a34;
+    background-position:bottom;
+    background-repeat: no-repeat;
+    background-size:contain;
+    min-height: 11vh;
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    position: relative;
+    bottom: 484px;
+    left: 16px;
+    justify-content: space-between;
+}
+
+.cat{
+    cursor: pointer;
+}
+
+.menu .cat img{
+    height: 110px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.menu .cat img:hover{
+    transform: scale(1.2);
+}
+
+.logo{
+    color:#FFFDFC;
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.navbar{
+    right: 100px;
+}
+
+.menu .navbar u1 li{
+    position: relative;
+    float: right;
+    right: 40px;
+    bottom: 80px;
+}
+
+.menu .navbar u1 li a{
+    font-size: 17px;
+    padding: 16px;
+    color:black;
+    display: block;
+    font-weight: 400;
+}
+.menu .navbar u1 li a:hover{
+    color: #fff;
+}
+
+#menu{
+    display: none;
+}
+
+.menu.icono{
+    width: 25px;
+}
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+.header-content h1{
+font-size: 30px;
+line-height: 80px;
+text-transform: uppercase;
+margin-bottom: 35px;
+}
+
+.btn-1{
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+    padding: 11px 35px;
+    background-color: #079ca3;
+    color:black;
+    text-transform: uppercase;
+}
+
+.btn-1:hover{
+    background-color: #f6f0ed;
+}
+
+.productos {
+    padding: 100px 0;
+    background-color: #f6f0ed;
+    position: relative;
+}
+
+.txtp{
+    font-weight: 600;
+    font-size: 22px;
+    color: black;
+    padding:0 8px;
+    margin-bottom: 3px;
+}
+
+.productos-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+
+.img{
+    width: 100px;
+    height: 99px;
+    display: block;
+    margin: 0 auto
+}
+
+.texto{
+    margin-top: 5px;
+}
+
+.slide {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 26px;
+}
+.slide-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: calc( 300px + 3em);
+}
+.slide-open:checked + .slide-item {
+    position: static;
+    opacity: 100;
+}
+.slide-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+.slide-item img {
+    display: block;
+    height: 100;
+    max-width: 100%;
+}
+.slide-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+.slide-control.prev {
+    left: 2%;
+}
+.slide-control.next {
+    right: 2%;
+}
+.slide-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+#slide-1:checked ~ .control-1,
+#slide-2:checked ~ .control-2,
+#slide-3:checked ~ .control-3 {
+    display: block;
+}
+.slide-indicador {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+.slide-indicador li {
+    display: inline-block;
+    margin: 0 5px;
+}
+.slide-circulo {
+    color: #828282;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+.slide-circulo:hover {
+    color: #aaaaaa;
+}
+#slide-1:checked ~ .control-1 ~ .slide-indicador 
+     li:nth-child(1) .slide-circulo,
+#slide-2:checked ~ .control-2 ~ .slide-indicador 
+      li:nth-child(2) .slide-circulo,
+#slide-3:checked ~ .control-3 ~ .slide-indicador 
+      li:nth-child(3) .slide-circulo {
+    color: #428bca;
+}
+#titulo {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
+         -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+.imgcarrusel{
+    width: 910px;
+    height: auto;
+    position: absolute;
+    opacity: 10;
+}
+
+.footer{
+    padding: 20px 0;
+    background-color: #db9a34;
+    margin-top: 40px;
+}
+
+.footer-content{
+    position: relative;
+    top: 80px;
+    left: 90px;
+    font-size: 13px;
+    padding: 100 90px;
+    margin-bottom: 0px;
+    text-align: justify;
+}
+
+.footer-contact{
+    position: relative;
+    bottom: 115px;
+    left: 380px;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 0 90px;
+    margin-bottom: 0px;
+    text-align: justify;
+}
+
