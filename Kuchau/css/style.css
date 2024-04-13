@@ -272,24 +272,22 @@ margin-bottom: 35px;
     margin-top: 40px;
 }
 
-.footer-content{
-    position: relative;
-    top: 80px;
-    left: 90px;
-    font-size: 13px;
-    padding: 100 90px;
-    margin-bottom: 0px;
-    text-align: justify;
-}
-
-.footer-contact{
-    position: relative;
-    bottom: 115px;
-    left: 380px;
-    justify-content: space-between;
+.footer-contact {
     font-size: 13px;
     padding: 0 90px;
-    margin-bottom: 0px;
+    padding-bottom: 20px;
     text-align: justify;
+    margin-top: 20px;
 }
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px; /* Aumenta el espacio entre los dos div */
+}
+
+.link {
+    margin-bottom: 20px;
+}
+
 
