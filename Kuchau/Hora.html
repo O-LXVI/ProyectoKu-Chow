@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitudes</title>
+</head>
+<body>
+    
+    <section class="vh-100" style="background-image: url(https://desarrollo.mundaca.cl/fondo.jpg); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center;">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-xl-10">
+              <div class="card" style="border-radius: 1rem;">
+                <div class="row g-0">
+                  <div class="col-md-6 col-lg-5 d-none d-md-block">
+                    <img src="https://desarrollo.mundaca.cl/portada.png"
+                      alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+                  </div>
+                  <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                    <div class="card-body p-4 p-lg-5 text-black">
+      
+                      <form>
+      
+                        <div class="align-self-center">
+                          <span class="h1 fw-bold mb-0">Ku-Chow</span>
+                        </div>
+      
+                        <div class="form-outline mb-4">
+                            <h2>Direccion de correo</h2>
+                          <input type="email" id="form2Example17" class="form-control form-control-lg" />
+                        </div>
+                        
+                        <h2>Marca de auto</h2>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>---</option>
+                            <option value="1">Toyota</option>
+                            <option value="2">Mazda</option>
+                            <option value="3">Nissan</option>
+                            <option value="4">Hyundai</option>
+                            <option value="5">Kia</option>
+                            <option value="6">Chevrolet</option>
+                            <option value="7">Ford</option>
+                            <option value="8">Volkswagen</option>
+                            <option value="9">Renault</option>
+                            <option value="10">Peugeot</option>
+                            <option value="11">Suzuki</option>
+                            <option value="12">Honda</option>
+                            <option value="13">Mercedes-Benz</option>
+                            <option value="14">BMW</option>
+                            <option value="15">Audi</option>
+                            <option value="16">Subaru</option>
+                            <option value="17">Jeep</option>
+                            <option value="18">Volvo</option>
+                            <option value="19">Fiat</option>
+                            <option value="20">Mini</option>
+                            <option value="21">Mitsubishi</option>
+                            <option value="22">Citroën</option>
+                            <option value="23">Seat</option>
+                            <option value="24">Skoda</option>
+                            <option value="25">Land Rover</option>
+                            <option value="26">Porsche</option>
+                            <option value="27">Jaguar</option>
+                            <option value="28">Infiniti</option>
+                            <option value="29">Acura</option>
+                            <option value="30">Lexus</option>
+                            
+                          </select><br>
+                        
+                          <h2>Año</h2>
+                          <select class="form-select" aria-label="Default select example">
+                              <option selected>---</option>
+                              <option value="1">1984</option>
+                              <option value="2">1985</option>
+                              <option value="3">1986</option>
+                              <option value="4">1987</option>
+                              <option value="5">1988</option>
+                              <option value="6">1989</option>
+                              <option value="7">1990</option>
+                              <option value="8">1991</option>
+                              <option value="9">1992</option>
+                              <option value="10">1993</option>
+                              <option value="11">1994</option>
+                              <option value="12">1995</option>
+                              <option value="13">1996</option>
+                              <option value="14">1997</option>
+                              <option value="15">1998</option>
+                              <option value="16">1999</option>
+                              <option value="17">2000</option>
+                              <option value="18">2001</option>
+                              <option value="19">2002</option>
+                              <option value="20">2003</option>
+                              <option value="21">2004</option>
+                              <option value="22">2005</option>
+                              <option value="23">2006</option>
+                              <option value="24">2007</option>
+                              <option value="25">2008</option>
+                              <option value="26">2009</option>
+                              <option value="27">2010</option>
+                              <option value="28">2011</option>
+                              <option value="29">2012</option>
+                              <option value="30">2013</option>
+                              <option value="31">2014</option>
+                              <option value="32">2015</option>
+                              <option value="33">2016</option>
+                              <option value="34">2017</option>
+                              <option value="35">2018</option>
+                              <option value="36">2019</option>
+                              <option value="37">2020</option>
+                              <option value="38">2021</option>
+                              <option value="39">2022</option>
+                            </select><br>
+
+                        <input type="radio" id="10-30-am" value="" class="hidden peer" name="timetable">
+                        <ul id="timetable" class="grid w-full grid-cols-3 gap-2 mb-5">
+                            <li>
+                                <input type="radio" id="10-am" value="" class="hidden peer" name="timetable">
+                                <label for="10-am"
+                                class="inline-flex items-center justify-center w-full px-2 py-1 text-sm font-medium text-center hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-800 border rounded-lg cursor-pointer text-gray-500 border-gray-200 dark:border-gray-700 dark:peer-checked:border-blue-500 peer-checked:border-blue-700 dark:hover:border-gray-600 dark:peer-checked:text-blue-500 peer-checked:bg-blue-50 peer-checked:text-blue-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-600 dark:peer-checked:bg-blue-900">
+                                10:00 AM
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" id="10-30-am" value="" class="hidden peer" name="timetable">
+                                <label for="10-30-am"
+                                class="inline-flex items-center justify-center w-full px-2 py-1 text-sm font-medium text-center hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-800 border rounded-lg cursor-pointer text-gray-500 border-gray-200 dark:border-gray-700 dark:peer-checked:border-blue-500 peer-checked:border-blue-700 dark:hover:border-gray-600 dark:peer-checked:text-blue-500 peer-checked:bg-blue-50 peer-checked:text-blue-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-600 dark:peer-checked:bg-blue-900">
+                                10:30 AM
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" id="11-am" value="" class="hidden peer" name="timetable">
+                                <label for="11-am"
+                                class="inline-flex items-center justify-center w-full px-2 py-1 text-sm font-medium text-center hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-800 border rounded-lg cursor-pointer text-gray-500 border-gray-200 dark:border-gray-700 dark:peer-checked:border-blue-500 peer-checked:border-blue-700 dark:hover:border-gray-600 dark:peer-checked:text-blue-500 peer-checked:bg-blue-50 peer-checked:text-blue-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-600 dark:peer-checked:bg-blue-900">
+                                11:00 AM
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" id="11-30-am" value="" class="hidden peer" name="timetable">
+                                <label for="11-30-am"
+                                class="inline-flex items-center justify-center w-full px-2 py-1 text-sm font-medium text-center hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-800 border rounded-lg cursor-pointer text-gray-500 border-gray-200 dark:border-gray-700 dark:peer-checked:border-blue-500 peer-checked:border-blue-700 dark:hover:border-gray-600 dark:peer-checked:text-blue-500 peer-checked:bg-blue-50 peer-checked:text-blue-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-600 dark:peer-checked:bg-blue-900">
+                                11:30 AM
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" id="12-am" value="" class="hidden peer" name="timetable" checked>
+                                <label for="12-am"
+                                class="inline-flex items-center justify-center w-full px-2 py-1 text-sm font-medium text-center hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-800 border rounded-lg cursor-pointer text-gray-500 border-gray-200 dark:border-gray-700 dark:peer-checked:border-blue-500 peer-checked:border-blue-700 dark:hover:border-gray-600 dark:peer-checked:text-blue-500 peer-checked:bg-blue-50 peer-checked:text-blue-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-600 dark:peer-checked:bg-blue-900">
+                                12:00 AM
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" id="12-30-pm" value="" class="hidden peer" name="timetable">
+                                <label for="12-30-pm"
+                                class="inline-flex items-center justify-center w-full px-2 py-1 text-sm font-medium text-center hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-800 border rounded-lg cursor-pointer text-gray-500 border-gray-200 dark:border-gray-700 dark:peer-checked:border-blue-500 peer-checked:border-blue-700 dark:hover:border-gray-600 dark:peer-checked:text-blue-500 peer-checked:bg-blue-50 peer-checked:text-blue-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-600 dark:peer-checked:bg-blue-900">
+                                12:30 PM
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" id="1-pm" value="" class="hidden peer" name="timetable">
+                                <label for="1-pm"
+                                class="inline-flex items-center justify-center w-full px-2 py-1 text-sm font-medium text-center hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-800 border rounded-lg cursor-pointer text-gray-500 border-gray-200 dark:border-gray-700 dark:peer-checked:border-blue-500 peer-checked:border-blue-700 dark:hover:border-gray-600 dark:peer-checked:text-blue-500 peer-checked:bg-blue-50 peer-checked:text-blue-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-600 dark:peer-checked:bg-blue-900">
+                                01:00 PM
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" id="1-30-pm" value="" class="hidden peer" name="timetable">
+                                <label for="1-30-pm"
+                                class="inline-flex items-center justify-center w-full px-2 py-1 text-sm font-medium text-center hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-800 border rounded-lg cursor-pointer text-gray-500 border-gray-200 dark:border-gray-700 dark:peer-checked:border-blue-500 peer-checked:border-blue-700 dark:hover:border-gray-600 dark:peer-checked:text-blue-500 peer-checked:bg-blue-50 peer-checked:text-blue-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-600 dark:peer-checked:bg-blue-900">
+                                01:30 PM
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" id="2-pm" value="" class="hidden peer" name="timetable">
+                                <label for="2-pm"
+                                class="inline-flex items-center justify-center w-full px-2 py-1 text-sm font-medium text-center hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-800 border rounded-lg cursor-pointer text-gray-500 border-gray-200 dark:border-gray-700 dark:peer-checked:border-blue-500 peer-checked:border-blue-700 dark:hover:border-gray-600 dark:peer-checked:text-blue-500 peer-checked:bg-blue-50 peer-checked:text-blue-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-600 dark:peer-checked:bg-blue-900">
+                                02:00 PM
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" id="2-30-pm" value="" class="hidden peer" name="timetable">
+                                <label for="2-30-pm"
+                                class="inline-flex items-center justify-center w-full px-2 py-1 text-sm font-medium text-center hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-800 border rounded-lg cursor-pointer text-gray-500 border-gray-200 dark:border-gray-700 dark:peer-checked:border-blue-500 peer-checked:border-blue-700 dark:hover:border-gray-600 dark:peer-checked:text-blue-500 peer-checked:bg-blue-50 peer-checked:text-blue-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-600 dark:peer-checked:bg-blue-900">
+                                02:30 PM
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" id="3-pm" value="" class="hidden peer" name="timetable">
+                                <label for="3-pm"
+                                class="inline-flex items-center justify-center w-full px-2 py-1 text-sm font-medium text-center hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-800 border rounded-lg cursor-pointer text-gray-500 border-gray-200 dark:border-gray-700 dark:peer-checked:border-blue-500 peer-checked:border-blue-700 dark:hover:border-gray-600 dark:peer-checked:text-blue-500 peer-checked:bg-blue-50 peer-checked:text-blue-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-600 dark:peer-checked:bg-blue-900">
+                                03:00 PM
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" id="3-30-pm" value="" class="hidden peer" name="timetable">
+                                <label for="3-30-pm"
+                                class="inline-flex items-center justify-center w-full px-2 py-1 text-sm font-medium text-center hover:text-gray-900 dark:hover:text-white bg-white dark:bg-gray-800 border rounded-lg cursor-pointer text-gray-500 border-gray-200 dark:border-gray-700 dark:peer-checked:border-blue-500 peer-checked:border-blue-700 dark:hover:border-gray-600 dark:peer-checked:text-blue-500 peer-checked:bg-blue-50 peer-checked:text-blue-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-600 dark:peer-checked:bg-blue-900">
+                                03:30 PM
+                                </label>
+                            </li>
+                        </ul>
+
+                        <div class="pt-1 mb-4">
+                            <a href="home.html" class="btn btn-dark btn-lg btn-block" type="button" >Pedir hora</a>
+                          </div>
+                          <a href="#!" class="small text-muted">Terminos de uso.</a>
+                          <a href="#!" class="small text-muted">Politica de privacidad</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+</html>
