@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar servicio</title>
+    <title>Lista de Servicios</title>
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+
     <header id="header" class="header navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-fluid">
       
@@ -29,11 +29,12 @@
                 <a class="nav-link" href="{% url 'index' %}">Sobre nosotros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'index' %}">Servicios</a>
+                <a class="nav-link" href="{% url 'lista' %}">Servicios</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'equipo' %}">Equipo</a>
               </li>
+
             </ul>
           </div>
       
@@ -43,52 +44,21 @@
       </header> <br> <br> <br> <br>
 
     <div class="container mt-5">
-        {% if servicio %}
-            <h2 class="text-center">Formulario Actualizar Datos</h2>
-            <form action="{% url 'serviciosUpdate' servicio.id %}" method="POST" class="mt-4">
-                {% csrf_token %}
-                <div class="form-group row">
-                    <label for="servicio" class="col-sm-2 col-form-label">Servicio</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="servicio" name="servicio" value="{{ servicio.servicio }}">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="valor" class="col-sm-2 col-form-label">Valor</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="valor" name="valor" value="{{ servicio.valor }}">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="mecanico" class="col-sm-2 col-form-label">Mecanico</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="mecanico" name="mecanico" value="{{ servicio.mecanico }}">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="descripcion" class="col-sm-2 col-form-label">Descripcion</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="descripcion" name="descripcion" value="{{ servicio.descripcion }}">
-                    </div>
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="btn btn-primary">Actualizar</button>
-                </div>
-            </form>
-        {% endif %}
-        <div id="idMensajes" class="mt-4">
-            {% if mensaje %}
-                <div class="alert alert-info text-center" role="alert">
-                    {{ mensaje }}
-                </div>
-            {% endif %}
-        </div>
-        <div class="text-center mt-3">
-            <a href="{% url 'crud' %}" class="btn btn-secondary">Volver</a>
-        </div>
+        <h1 class="text-center">Lista de Servicios</h1>
+        <ul class="list-group mt-4">
+            {% for servicio in servicios %}
+                <li class="list-group-item">
+                    <strong>Servicio:</strong> {{ servicio.servicio }}<br>
+                    <strong>Valor:</strong> {{ servicio.valor }}<br>
+                    <strong>Mecánico:</strong> {{ servicio.mecanico }}<br>
+                    <strong>Descripción:</strong> {{ servicio.descripcion }}
+                </li>
+            {% endfor %}
+        </ul>
     </div>
-<br>
-<br>
+
+    <br> <br>
+
     <style>
         .footer {
             background-color: #343a40;
@@ -128,7 +98,7 @@
             margin-bottom: 10px;
         }
     </style>
-    
+
     <footer id="footer" class="footer position-relative">
         <div class="container footer-top">
             <div class="row gy-4">

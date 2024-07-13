@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipo</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        .team .card {
+            transition: transform 0.3s;
+        }
+        .team .card:hover {
+            transform: translateY(-10px);
+        }
+        .team .card-img-top {
+            height: 300px;
+            object-fit: cover;
+        }
+        .social {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        .social a {
+            color: #fff;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header" class="header navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+      
+          <a href="{% url 'index' %}" class="navbar-brand">
+            <h1 class="sitename">Ku-Chow</h1><span></span>
+          </a>
+      
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'index' %}">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'index' %}">Sobre nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'lista' %}">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'index' %}">Equipo</a>
+              </li>
+            </ul>
+          </div>
+      
+          <a class="btn btn-primary btn-getstarted" href="{% url 'reg' %}">Crear cuenta</a>
+      
+        </div>
+      </header> <br> <br>
+
+      <section id="team" class="team section py-5 bg-light">
+        <div class="container text-center mb-5" data-aos="fade-up">
+            <h2 class="display-4">Equipo</h2>
+            <p class="lead">Este es nuestro equipo de mecánicos y administradores</p>
+        </div>
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card border-0 shadow-sm">
+                        <img src="https://desarrollo.mundaca.cl/icon.jpg" class="card-img-top img-fluid" alt="Johnny Depp">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Johnny Depp</h4>
+                            <p class="card-text">Especialista en electrónica automotriz.</p>
+                            <p class="card-text">Alguien que entiende y trabaja con los sistemas electrónicos de los automóviles, desde las luces hasta la computadora de a bordo. Son expertos en diagnosticar y arreglar problemas eléctricos y también pueden instalar sistemas nuevos, como los de entretenimiento o seguridad. Básicamente, son los "médicos" de los aspectos electrónicos de los autos.</p>
+                            <div class="social">
+                                <a href="https://x.com/DuocUC?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="bi bi-twitter"></i></a>
+                                <a href="#"><i class="bi bi-facebook"></i></a>
+                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card border-0 shadow-sm">
+                        <img src="https://desarrollo.mundaca.cl/icon.jpg" class="card-img-top img-fluid" alt="Oona Chaplin">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Oona Chaplin</h4>
+                            <p class="card-text">Especialista en cajas de cambio.</p>
+                            <p class="card-text">Alguien que conoce a fondo los sistemas de transmisión de los vehículos. Estos profesionales son expertos en diagnosticar y reparar problemas relacionados con las cajas de cambio automáticas, manuales o semiautomáticas. Su trabajo implica entender cómo funcionan estos sistemas y cómo solucionar cualquier fallo que puedan tener. En resumen, son los "mecánicos" especializados en todo lo relacionado con las transmisiones de los automóviles.</p>
+                            <div class="social">
+                                <a href="https://x.com/DuocUC?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="bi bi-twitter"></i></a>
+                                <a href="#"><i class="bi bi-facebook"></i></a>
+                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card border-0 shadow-sm">
+                        <img src="https://desarrollo.mundaca.cl/icon.jpg" class="card-img-top img-fluid" alt="Morgan Freeman">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Morgan Freeman</h4>
+                            <p class="card-text">Especialista en suspensión y dirección.</p>
+                            <p class="card-text">Alguien que se ocupa de que tu auto se mantenga estable y fácil de controlar mientras conduces. Ellos saben cómo arreglar cualquier problema con la suavidad del viaje o con la dirección del auto, asegurándose de que puedas manejar con confianza y comodidad. Son como los "médicos" de la comodidad y la dirección de tu vehículo.</p>
+                            <div class="social">
+                                <a href="https://x.com/DuocUC?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="bi bi-twitter"></i></a>
+                                <a href="#"><i class="bi bi-facebook"></i></a>
+                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card border-0 shadow-sm">
+                        <img src="https://desarrollo.mundaca.cl/icon.jpg" class="card-img-top img-fluid" alt="Muriel Labra">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Muriel Labra</h4>
+                            <p class="card-text">Programadora</p>
+                            <p class="card-text">Programadora con experiencia en desarrollo de software, altamente competente en múltiples lenguajes de programación como Java, Python y JavaScript.</p>
+                            <div class="social">
+                                <a href="https://x.com/DuocUC?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="bi bi-twitter"></i></a>
+                                <a href="#"><i class="bi bi-facebook"></i></a>
+                                <a href="https://www.instagram.com/i6hoonlv/"><i class="bi bi-instagram"></i></a>
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card border-0 shadow-sm">
+                        <img src="https://desarrollo.mundaca.cl/icon.jpg" class="card-img-top img-fluid" alt="Manuel Bastidas">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Manuel Bastidas</h4>
+                            <p class="card-text">Analista de datos</p>
+                            <p class="card-text">Alguien que trabaja con grandes cantidades de datos para encontrar patrones y tendencias que ayuden a tomar decisiones informadas en una organización.</p>
+                            <div class="social">
+                                <a href="https://x.com/DuocUC?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="bi bi-twitter"></i></a>
+                                <a href="#"><i class="bi bi-facebook"></i></a>
+                                <a href="https://www.instagram.com/el_nuuub/"><i class="bi bi-instagram"></i></a>
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="card border-0 shadow-sm">
+                        <img src="https://desarrollo.mundaca.cl/icon.jpg" class="card-img-top img-fluid" alt="Valentina Venegas">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Valentina Venegas</h4>
+                            <p class="card-text">Diseñadora</p>
+                            <p class="card-text">Diseñadora creativa con experiencia en diseño gráfico y diseño de experiencia de usuario</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 40px 0;
+        }
+        .footer a {
+            color: #fff;
+            transition: color 0.2s;
+        }
+        .footer a:hover {
+            color: #d1d1d1;
+            text-decoration: none;
+        }
+        .footer .social-links a {
+            margin-right: 10px;
+            color: #fff;
+            transition: color 0.2s;
+        }
+        .footer .social-links a:hover {
+            color: #d1d1d1;
+        }
+        .footer .footer-about,
+        .footer .footer-links,
+        .footer .footer-contact {
+            margin-bottom: 30px;
+        }
+        .footer .sitename {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .footer .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer .footer-links ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+
+    <footer id="footer" class="footer position-relative">
+        <div class="container footer-top">
+            <div class="row gy-4">
+                <div class="col-lg-5 col-md-12 footer-about">
+                    <a href="index.html" class="logo d-flex align-items-center">
+                        <span class="sitename">Ku-Chow</span>
+                    </a>
+                    <p>Más que un taller un amigo.</p>
+                    <div class="social-links d-flex mt-4">
+                        <a href="https://x.com/DuocUC?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="bi bi-twitter"></i></a>
+                        <a href="https://www.facebook.com/DuocUC.SanJoaquin/?locale=es_LA"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/duocucsanjoaquin/?hl=es"><i class="bi bi-instagram"></i></a>
+                        <a href="https://cl.linkedin.com/company/duocuc"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6 footer-links">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="index.html#hero">Inicio</a></li>
+                        <li><a href="index.html#about">Sobre nosotros</a></li>
+                        <li><a href="index.html#services">Servicios</a></li>
+                        <li><a href="index.html#team">Equipo</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                    <h4>Contactos</h4>
+                    <p>
+                        <strong>Dirección:</strong><br>
+                        Av. Vicuña Mackenna<br>
+                        4917, 8970117 San Joaquín,<br>
+                        Región Metropolitana<br>
+                        Chile
+                    </p>
+                    <p class="mt-4"><strong>Phone:</strong> +56 9 4976 4786</p>
+                    <p><strong>Email:</strong> kuchow@contacto.cl</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+                        
+</body>

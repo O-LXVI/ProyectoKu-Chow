@@ -9,6 +9,26 @@ def index(request):
     servicios = Servicios.objects.all()
     return render(request, 'servicios/index.html', {'servicios': servicios})
 
+def log(request):
+    servicios = Servicios.objects.all()
+    return render(request, 'servicios/Log.html', {'servicios': servicios})
+
+def reg(request):
+    servicios = Servicios.objects.all()
+    return render(request, 'servicios/Reg.html', {'servicios': servicios})
+
+def lista(request):
+    servicios = Servicios.objects.all()
+    return render(request, 'servicios/listaServicios.html', {'servicios': servicios})
+
+def equipo(request):
+    servicios = Servicios.objects.all()
+    return render(request, 'servicios/equipo.html', {'servicios': servicios})
+
+def trabajos(request):
+    servicios = Servicios.objects.all()
+    return render(request, 'servicios/trabajos.html', {'servicios': servicios})
+
 def crud(request):
     servicios = Servicios.objects.all()
     return render(request, 'servicios/servicios_lista.html', {'servicios': servicios})
