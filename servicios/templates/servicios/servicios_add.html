@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h2>Formulario CRUD para servicios</h2>
+        <form action="{% url 'serviciosAdd' %}" method="POST">
+            {% csrf_token %}
+            <pre>Servicio  <input type="text" name="servicio"></pre>
+            <pre>Valor  <input type="text" name="valor"></pre>
+            <pre>Mecanico  <input type="text" name="mecanico"></pre>
+            <pre>Descripcion  <input type="text" name="descripcion"></pre>
+            <input type="submit" name="opcion" value="Agregar">
+        </form> <br> <br>
+        <a href="{% url 'crud' %}"> Volver </a>
+        <br>
+        <div id="idMensajes">
+            {% if mensaje %}
+            {{ mensaje }}
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

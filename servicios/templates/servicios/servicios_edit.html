@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        {% if servicio %}
+            <h2>Formulario actualizar datos</h2>
+
+            <form action="{% url 'serviciosUpdate' servicio.id %}" method="POST">
+                {% csrf_token %}
+
+                <pre>Servicio  <input type="text" name="servicio" value="{{ servicio.servicio }}"></pre>
+                <pre>Valor  <input type="text" name="valor" value="{{ servicio.valor }}"></pre>
+                <pre>Mecanico  <input type="text" name="mecanico" value="{{ servicio.mecanico }}"></pre>
+                <pre>Descripcion  <input type="text" name="descripcion" value="{{ servicio.descripcion }}"></pre>
+                <input type="submit" name="opcion" value="actualizar">
+            </form> <br> <br>
+        {% endif %}
+        <div id="idMensajes">
+            {% if mensaje %}
+            {{ mensaje }}
+            {% endif %}
+        </div>
+        <br><br>
+        <a href="{% url 'crud' %}"> Volver </a>
+    </div>
+</body>
+</html>

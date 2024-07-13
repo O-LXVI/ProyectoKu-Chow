@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
 <body>
     <h1>Editar servicios</h1>
@@ -29,19 +30,18 @@
             {% for x in servicios %}
                 <tr>
                     <td>{{ x.servicio }}</td>
-                    <td><a href="{% url 'servicios_del' pk=x.servicio %}">Eliminar</a></td>
-                    <td><a href="{% url 'servicios_findEdit' pk=x.servicio %}">Modificar</a></td>
+                    <td><a href="{% url 'servicios_del' pk=x.pk %}">Eliminar</a></td>
+                    <td><a href="{% url 'servicios_findEdit' pk=x.pk %}">Modificar</a></td>
                 </tr>
             {% endfor %}
         {% endif %}
     </table>
-    
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script>
     $(document).ready(function(){
         $("#idMensajes").delay(2000).fadeOut("slow");
-    })
+    });
 </script>
 </body>
 </html>
