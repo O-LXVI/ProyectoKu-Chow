@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar servicio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header id="header" class="header navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+      
+          <a href="{% url 'index' %}" class="navbar-brand">
+            <h1 class="sitename">Ku-Chow</h1><span></span>
+          </a>
+      
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'index' %}">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'index' %}">Sobre nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'index' %}">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'equipo' %}">Equipo</a>
+              </li>
+            </ul>
+          </div>
+      
+          <a class="btn btn-primary btn-getstarted" href="{% url 'reg' %}">Crear cuenta</a>
+      
+        </div>
+      </header> <br> <br> <br> <br>
+
+    <div class="container mt-5">
+        {% if servicio %}
+            <h2 class="text-center">Formulario Actualizar Datos</h2>
+            <form action="{% url 'serviciosUpdate' servicio.id %}" method="POST" class="mt-4">
+                {% csrf_token %}
+                <div class="form-group row">
+                    <label for="servicio" class="col-sm-2 col-form-label">Servicio</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="servicio" name="servicio" value="{{ servicio.servicio }}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="valor" class="col-sm-2 col-form-label">Valor</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="valor" name="valor" value="{{ servicio.valor }}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="mecanico" class="col-sm-2 col-form-label">Mecanico</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="mecanico" name="mecanico" value="{{ servicio.mecanico }}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="descripcion" class="col-sm-2 col-form-label">Descripcion</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="descripcion" name="descripcion" value="{{ servicio.descripcion }}">
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Actualizar</button>
+                </div>
+            </form>
+        {% endif %}
+        <div id="idMensajes" class="mt-4">
+            {% if mensaje %}
+                <div class="alert alert-info text-center" role="alert">
+                    {{ mensaje }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="text-center mt-3">
+            <a href="{% url 'crud' %}" class="btn btn-secondary">Volver</a>
+        </div>
+    </div>
+<br>
+<br>
+    <style>
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 40px 0;
+        }
+        .footer a {
+            color: #fff;
+            transition: color 0.2s;
+        }
+        .footer a:hover {
+            color: #d1d1d1;
+            text-decoration: none;
+        }
+        .footer .social-links a {
+            margin-right: 10px;
+            color: #fff;
+            transition: color 0.2s;
+        }
+        .footer .social-links a:hover {
+            color: #d1d1d1;
+        }
+        .footer .footer-about,
+        .footer .footer-links,
+        .footer .footer-contact {
+            margin-bottom: 30px;
+        }
+        .footer .sitename {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .footer .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer .footer-links ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+    
+    <footer id="footer" class="footer position-relative">
+        <div class="container footer-top">
+            <div class="row gy-4">
+                <div class="col-lg-5 col-md-12 footer-about">
+                    <a href="index.html" class="logo d-flex align-items-center">
+                        <span class="sitename">Ku-Chow</span>
+                    </a>
+                    <p>Más que un taller un amigo.</p>
+                    <div class="social-links d-flex mt-4">
+                        <a href="https://x.com/DuocUC?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="bi bi-twitter"></i></a>
+                        <a href="https://www.facebook.com/DuocUC.SanJoaquin/?locale=es_LA"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/duocucsanjoaquin/?hl=es"><i class="bi bi-instagram"></i></a>
+                        <a href="https://cl.linkedin.com/company/duocuc"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6 footer-links">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="index.html#hero">Inicio</a></li>
+                        <li><a href="index.html#about">Sobre nosotros</a></li>
+                        <li><a href="index.html#services">Servicios</a></li>
+                        <li><a href="index.html#team">Equipo</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                    <h4>Contactos</h4>
+                    <p>
+                        <strong>Dirección:</strong><br>
+                        Av. Vicuña Mackenna<br>
+                        4917, 8970117 San Joaquín,<br>
+                        Región Metropolitana<br>
+                        Chile
+                    </p>
+                    <p class="mt-4"><strong>Phone:</strong> +56 9 4976 4786</p>
+                    <p><strong>Email:</strong> kuchow@contacto.cl</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Servicios</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <header id="header" class="header navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+      
+          <a href="{% url 'index' %}" class="navbar-brand">
+            <h1 class="sitename">Ku-Chow</h1><span></span>
+          </a>
+      
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'index' %}">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'index' %}">Sobre nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'index' %}">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'equipo' %}">Equipo</a>
+              </li>
+            </ul>
+          </div>
+      
+          <a class="btn btn-primary btn-getstarted" href="{% url 'reg' %}">Crear cuenta</a>
+      
+        </div>
+      </header> <br> <br> <br> <br>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Editar, crear y eliminar servicios de Ku-chow</h1>
+        <br>
+        <div class="text-center mb-4">
+            <a href="{% url 'serviciosAdd' %}" class="btn btn-primary">Agregar</a>
+        </div>
+
+        <div id="idMensajes">
+            {% if mensaje %}
+                <div class="alert alert-info text-center" role="alert">
+                    {{ mensaje }}
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                {% if servicios %}
+                    <thead>
+                        <tr>
+                            <th>Servicio</th>
+                            <th>Eliminar</th>
+                            <th>Modificar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for x in servicios %}
+                            <tr>
+                                <td>{{ x.servicio }}</td>
+                                <td><a href="{% url 'servicios_del' pk=x.pk %}" class="btn btn-danger">Eliminar</a></td>
+                                <td><a href="{% url 'servicios_findEdit' pk=x.pk %}" class="btn btn-warning">Modificar</a></td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                {% else %}
+                    <tr>
+                        <td colspan="3" class="text-center">No hay servicios disponibles</td>
+                    </tr>
+                {% endif %}
+            </table>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#idMensajes").delay(2000).fadeOut("slow");
+        });
+    </script>
+
+<style>
+    .footer {
+        background-color: #343a40;
+        color: #fff;
+        padding: 40px 0;
+    }
+    .footer a {
+        color: #fff;
+        transition: color 0.2s;
+    }
+    .footer a:hover {
+        color: #d1d1d1;
+        text-decoration: none;
+    }
+    .footer .social-links a {
+        margin-right: 10px;
+        color: #fff;
+        transition: color 0.2s;
+    }
+    .footer .social-links a:hover {
+        color: #d1d1d1;
+    }
+    .footer .footer-about,
+    .footer .footer-links,
+    .footer .footer-contact {
+        margin-bottom: 30px;
+    }
+    .footer .sitename {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .footer .footer-links ul {
+        list-style: none;
+        padding: 0;
+    }
+    .footer .footer-links ul li {
+        margin-bottom: 10px;
+    }
+</style>
+
+<footer id="footer" class="footer position-relative">
+    <div class="container footer-top">
+        <div class="row gy-4">
+            <div class="col-lg-5 col-md-12 footer-about">
+                <a href="index.html" class="logo d-flex align-items-center">
+                    <span class="sitename">Ku-Chow</span>
+                </a>
+                <p>Más que un taller un amigo.</p>
+                <div class="social-links d-flex mt-4">
+                    <a href="https://x.com/DuocUC?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.facebook.com/DuocUC.SanJoaquin/?locale=es_LA"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/duocucsanjoaquin/?hl=es"><i class="bi bi-instagram"></i></a>
+                    <a href="https://cl.linkedin.com/company/duocuc"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-6 footer-links">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="index.html#hero">Inicio</a></li>
+                    <li><a href="index.html#about">Sobre nosotros</a></li>
+                    <li><a href="index.html#services">Servicios</a></li>
+                    <li><a href="index.html#team">Equipo</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                <h4>Contactos</h4>
+                <p>
+                    <strong>Dirección:</strong><br>
+                    Av. Vicuña Mackenna<br>
+                    4917, 8970117 San Joaquín,<br>
+                    Región Metropolitana<br>
+                    Chile
+                </p>
+                <p class="mt-4"><strong>Phone:</strong> +56 9 4976 4786</p>
+                <p><strong>Email:</strong> kuchow@contacto.cl</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Registro</title>
+</head>
+
+<body>
+    <section class="vh-100"
+        style="background-image: url(https://desarrollo.mundaca.cl/fondo02.webp); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-md-6 col-lg-5 d-none d-md-block">
+                    <img src="https://desarrollo.mundaca.cl/portada.png" alt="login form" class="img-fluid rounded-left"
+                        style="border-radius: 1rem 0 0 1rem;">
+                </div>
+                <div class="col-md-6 col-lg-7">
+                    <div class="card border-0 shadow rounded-lg">
+                        <div class="card-body p-4 p-lg-5 text-dark">
+
+                            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Crear cuenta</h3>
+
+                            <form>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+
+                                        <div class="form-group">
+                                            <input type="text" id="firstName" class="form-control form-control-lg"
+                                                placeholder="Nombres">
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+
+                                        <div class="form-group">
+                                            <input type="text" id="lastName" class="form-control form-control-lg"
+                                                placeholder="Apellidos">
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control-lg"
+                                                id="birthdayDate" placeholder="Fecha de nacimiento">
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+
+                                        <div class="form-group">
+                                            <h6 class="mb-2 pb-1">Género:</h6>
+
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="gender"
+                                                    id="femaleGender" value="female" checked>
+                                                <label class="form-check-label" for="femaleGender">Femenino</label>
+                                            </div>
+
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="gender"
+                                                    id="maleGender" value="male">
+                                                <label class="form-check-label" for="maleGender">Masculino</label>
+                                            </div>
+
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="gender"
+                                                    id="otherGender" value="other">
+                                                <label class="form-check-label" for="otherGender">Otros</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+
+                                        <div class="form-group">
+                                            <input type="email" id="emailAddress"
+                                                class="form-control form-control-lg" placeholder="Correo electrónico">
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+
+                                        <div class="form-group">
+                                            <input type="tel" id="phoneNumber"
+                                                class="form-control form-control-lg" placeholder="Número telefónico">
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="mt-4 pt-2">
+                                    <a href="{% url 'index' %}" class="btn btn-dark btn-lg btn-block"
+                                        role="button">Crear cuenta</a>
+                                    <a href="{% url 'log' %}">Ya tengo cuenta</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+
+</html>

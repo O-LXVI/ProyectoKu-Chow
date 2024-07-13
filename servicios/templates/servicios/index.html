@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="./style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ku-chow</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-image: url('https://desarrollo.mundaca.cl/fondo02.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 40px 0;
+        }
+        .footer a {
+            color: #fff;
+            transition: color 0.2s;
+        }
+        .footer a:hover {
+            color: #d1d1d1;
+            text-decoration: none;
+        }
+        .footer .social-links a {
+            margin-right: 10px;
+            color: #fff;
+            transition: color 0.2s;
+        }
+        .footer .social-links a:hover {
+            color: #d1d1d1;
+        }
+        .footer .footer-about,
+        .footer .footer-links,
+        .footer .footer-contact {
+            margin-bottom: 30px;
+        }
+        .footer .sitename {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .footer .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer .footer-links ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+  <header id="header" class="header navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+  
+      <a href="{% url 'index' %}" class="navbar-brand">
+        <h1 class="sitename">Ku-Chow</h1><span></span>
+      </a>
+  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'index' %}">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'index' %}">Sobre nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'lista' %}">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'equipo' %}">Equipo</a>
+          </li>
+        </ul>
+      </div>
+  
+      <a class="btn btn-primary btn-getstarted" href="{% url 'reg' %}">Crear cuenta</a>
+  
+    </div>
+  </header> <br> <br> <br> <br>
+
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="card shadow-sm p-4">
+          <h2 class="mb-4">Sobre nosotros</h2>
+          <ul>
+            <li>
+              <h2>Confía en nosotros para mantener tu vehículo <br>en la carretera y en tu vida.</h2>
+            </li>
+            <li>
+              <p>Nuestro equipo de expertos en mecánica automotriz está comprometido con la excelencia <br>en el servicio y la satisfacción del cliente. Desde reparaciones básicas hasta diagnósticos avanzados, estamos aquí para cuidar de tu automóvil con habilidad y profesionalismo.</p>
+            </li>
+            <li>
+              <h3>Creación Ku-Chow</h3>
+              <p>Un grupo de alumnos recién egresados de la carrera de mecánica automotriz, deciden poner en funcionamiento un taller mecánico haciendo gala de las distintas habilidades adquiridas a lo largo de su carrera.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Locator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      gmpx-store-locator {
+        width:  100%;
+        height: 50%;
+
+        --gmpx-color-surface: #fff;
+        --gmpx-color-on-surface: #212121;
+        --gmpx-color-on-surface-variant: #757575;
+        --gmpx-color-primary: #1967d2;
+        --gmpx-color-outline: #e0e0e0;
+        --gmpx-fixed-panel-width-row-layout: 28.5em;
+        --gmpx-fixed-panel-height-column-layout: 65%;
+        --gmpx-font-family-base: "Roboto", sans-serif;
+        --gmpx-font-family-headings: "Roboto", sans-serif;
+        --gmpx-font-size-base: 0.875rem;
+        --gmpx-hours-color-open: #188038;
+        --gmpx-hours-color-closed: #d50000;
+        --gmpx-rating-color: #ffb300;
+        --gmpx-rating-color-empty: #e0e0e0;
+      }
+    </style>
+    <script>
+      const CONFIGURATION = {
+        "locations": [
+          {"title":"Duoc UC: Sede San Joaquín","address1":"Av. Vicuña Mackenna 4917","address2":"8970117 San Joaquín, Región Metropolitana, Chile","coords":{"lat":-33.50014782628563,"lng":-70.61623379140167},"placeId":"ChIJgfql5AvQYpYRZH9UHVuvjs0"}
+        ],
+        "mapOptions": {"center":{"lat":38.0,"lng":-100.0},"fullscreenControl":true,"mapTypeControl":false,"streetViewControl":false,"zoom":4,"zoomControl":true,"maxZoom":17,"mapId":""},
+        "mapsApiKey": "AIzaSyANioCIP8dlxLvAw89srMnTPBrRai8cG5E",
+        "capabilities": {"input":false,"autocomplete":false,"directions":false,"distanceMatrix":false,"details":false,"actions":false}
+      };
+
+    </script>
+    <script type="module">
+      document.addEventListener('DOMContentLoaded', async () => {
+        await customElements.whenDefined('gmpx-store-locator');
+        const locator = document.querySelector('gmpx-store-locator');
+        locator.configureFromQuickBuilder(CONFIGURATION);
+      });
+    </script>
+  </head>
+  <body>
+    
+    <!-- Please note unpkg.com is unaffiliated with Google Maps Platform. -->
+    <script type="module" src="https://unpkg.com/@googlemaps/extended-component-library@0.6"></script>
+
+    <!-- Uses components from the Extended Component Library; see
+         https://github.com/googlemaps/extended-component-library for more information
+         on these HTML tags and how to configure them. -->
+    <gmpx-api-loader key="AIzaSyANioCIP8dlxLvAw89srMnTPBrRai8cG5E" solution-channel="GMP_QB_locatorplus_v10_c"></gmpx-api-loader>
+    <gmpx-store-locator map-id="DEMO_MAP_ID"></gmpx-store-locator>
+  </body>
+</html>
+
+<footer id="footer" class="footer position-relative">
+    <div class="container footer-top">
+        <div class="row gy-4">
+            <div class="col-lg-5 col-md-12 footer-about">
+                <a href="index.html" class="logo d-flex align-items-center">
+                    <span class="sitename">Ku-Chow</span>
+                </a>
+                <p>Más que un taller un amigo.</p>
+                <div class="social-links d-flex mt-4">
+                    <a href="https://x.com/DuocUC?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.facebook.com/DuocUC.SanJoaquin/?locale=es_LA"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/duocucsanjoaquin/?hl=es"><i class="bi bi-instagram"></i></a>
+                    <a href="https://cl.linkedin.com/company/duocuc"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-6 footer-links">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="index.html#hero">Inicio</a></li>
+                    <li><a href="index.html#about">Sobre nosotros</a></li>
+                    <li><a href="index.html#services">Servicios</a></li>
+                    <li><a href="index.html#team">Equipo</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                <h4>Contactos</h4>
+                <p>
+                    <strong>Dirección:</strong><br>
+                    Av. Vicuña Mackenna<br>
+                    4917, 8970117 San Joaquín,<br>
+                    Región Metropolitana<br>
+                    Chile
+                </p>
+                <p class="mt-4"><strong>Phone:</strong> +56 9 4976 4786</p>
+                <p><strong>Email:</strong> kuchow@contacto.cl</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</body>
+</html>
